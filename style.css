@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url('background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.title {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 50px;
+    background-color: rgba(0,0,0,.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px;
+
+}
+
+.clock-container::before {
+    content: " ";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+filter: blur(25px);
+transform: scale(1.1);
+opacity: 1;
+transition: opacity 150ms;
+
+}
+
+.clock-container {
+position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+   width: 600px;
+   padding: 15px;
+   opacity: .8;
+   border-radius: 10px;
+   cursor: pointer;
+   margin: 10px;
+}
+.hours, .colon,  .minutes {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin: 7px;
+    /* background-color: red; */
+}
+
+.seconds, .meridiem {
+
+padding: 5px 0;
+    font-size: 1.5rem;
+   
+}
+
+
+.end-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
